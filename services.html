@@ -3,12 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Perfect Design - Agence de Marketing Digital </title>
+        <title>Création de sites web internet • Graphisme • Community Management | Ouagadougou, Burkina Faso </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="manifest" href="site.webmanifest">
 		<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+
+        <!-- Whatsapp Toggle Here -->
+        <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+        <script src="dist/js/whatsapp-widget.min.js"></script>
 
 		<!-- CSS here -->
             <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -319,6 +323,56 @@
         <!-- have-project End -->
 
     </main>
+
+
+    <div>
+
+        <!-- Toggleable custom form -->
+        <style>
+            .whatsapp-widget {
+                max-width: 480px;
+                display: none;
+            }
+            .whatsapp-widget.expanded {
+                display: block;
+            }
+        </style>
+        <!-- End -->
+
+        <!-- Built in form -->
+        <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+        <!-- End -->
+    
+        <script src="dist/js/whatsapp-widget.min.js"></script>
+        <script>
+            var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+                name: 'Perfect Design 226',
+                division: 'General Supports',
+                photo: 'assets/img/favicon.png',
+                introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+            }, [
+                {
+                    data: 'Votre nom',
+                    type: 'text',
+                    required: true
+                }, {
+             
+             
+                    data: 'Votre adresse email',
+                    type: 'email',
+                    required: false
+                }, {
+                    data: 'Votre message',
+                    type: 'text',
+                    required: true
+                }
+            ]);
+            generalSupport.toggle()
+        </script>
+
+    </div>
+
+
    <footer>
 
        <!-- Footer Start-->
