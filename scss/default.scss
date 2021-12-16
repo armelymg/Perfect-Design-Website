@@ -1,0 +1,211 @@
+// Toggle Variables
+$toggle-background-color: white;
+$toggle-size: 4rem;
+$toggle-padding: 1rem;
+$toggle-margin: 1rem;
+$toggle-height: $toggle-size - ($toggle-padding * 2);
+$toggle-width: $toggle-size - ($toggle-padding * 2);
+$toggle-online-indicator-size: 10px;
+
+// Widget Variables
+$widget-font-family: Helvetica, Arial, sans-serif;
+$widget-font-size: 15px;
+$widget-header-background-color: rgb(9, 94, 84);
+$widget-header-color: white;
+$widget-header-online-indicator-size: 7px;
+$widget-content-background-color: #d1ecd4;
+
+$whatsapp-green: #4fce5d;
+
+$box-shadow: 0 0 10px 5px rgba(0, 0, 0, .1);
+
+$transition-all: all .25s linear;
+
+.wa-widget {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.expanded {
+        border-radius: 1rem;
+    }
+
+    .wa-widget-content {
+        width: 360px;
+        transition: $transition-all;
+        visibility: hidden;
+        position: absolute;
+        bottom: $toggle-size + ($toggle-margin * 2);
+        opacity: 0;
+        right: 0;
+        z-index: -1;
+
+        &.expanded {
+            opacity: 1;
+            visibility: visible;
+            z-index: 99;
+        }
+    }
+}
+
+.wa-widget-toggle {
+    background-color: $toggle-background-color;
+    padding: 1rem;
+    margin: $toggle-margin;
+    height: $toggle-height;
+    width: $toggle-width;
+    border-radius: 9rem;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    cursor: default;
+    box-shadow: $box-shadow;
+    position: relative;
+
+    &::before {
+        content: '';
+        height: $toggle-online-indicator-size;
+        width: $toggle-online-indicator-size;
+        top: $toggle-online-indicator-size / 2;
+        right: $toggle-online-indicator-size / 2;
+        position: absolute;
+        background-color: red;
+        border-radius: $toggle-online-indicator-size;
+    }
+}
+
+.wa-widget-content {
+    overflow: hidden;
+    border-radius: .75rem;
+    box-shadow: $box-shadow;
+    margin: $toggle-margin;
+    font-family: $widget-font-family;
+    font-size: $widget-font-size;
+}
+
+.chat-header {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: $widget-header-background-color;
+    color: $widget-header-color;
+
+    .chat-admin-picture {
+        height: 3rem;
+        width: 3rem;
+        margin-right: 1rem;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &::before {
+            content: '';
+            height: $widget-header-online-indicator-size;
+            width: $widget-header-online-indicator-size;
+            border-radius: $widget-header-online-indicator-size;
+            background-color: $whatsapp-green;
+            border: 2px solid $widget-header-background-color;
+            position: absolute;
+            bottom: $widget-header-online-indicator-size / 3;
+            right: $widget-header-online-indicator-size / 3;
+        }
+    }
+
+    h4,
+    p {
+        margin: .2rem;
+    }
+}
+
+.chat-content {
+    padding: 1rem;
+    background-color: $widget-content-background-color;
+
+    .chat-admin-picture {
+        height: 2rem;
+        width: 2rem;
+        margin-right: .5rem;
+    }
+}
+
+.chat-item {
+    display: inline-flex;
+    align-items: flex-end;
+
+    p {
+        margin: 0 2rem .5rem 0;
+        padding: 1rem;
+        background-color: white;
+        border-radius: 1rem;
+
+        &:first-child {
+            border-top-left-radius: 0;
+        }
+    }
+}
+
+.chat-form {
+    background-color: white;
+    padding: .25rem;
+
+    textarea,
+    input {
+        width: 100%;
+        padding: .75rem 1rem;
+        background-color: inherit;
+        font-family: inherit;
+        resize: none;
+        margin-bottom: .25rem;
+        transition: $transition-all;
+    }
+
+    textarea,
+    input,
+    input:focus {
+        border: 1px solid transparent;
+        outline: 0;
+        border-radius: .5rem;
+    }
+
+    .chat-send {
+        border: 0;
+        outline: 0;
+        padding: .75rem;
+        width: 100%;
+        font-weight: bold;
+        font-size: 1.1rem;
+        background-color: $whatsapp-green;
+        color: white;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+
+    .required {
+        border: 1px solid rgba($color: red, $alpha: .25);
+        background-color: rgba($color: red, $alpha: .1);
+    }
+}
+
+@media (max-width: 460px) {
+    .wa-widget {
+        width: 100%;
+    }
+
+    .wa-widget-toggle {
+        float: right;
+    }
+
+    .wa-widget-content {
+        width: auto;
+        left: $toggle-margin;
+        right: $toggle-margin;
+    }
+}
