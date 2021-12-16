@@ -3,8 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Perfect Design - Agence de Marketing Digital </title>
-        <meta name="description" content="">
+        <title>Perfect Design - Agence de Marketing Digital - Ouagadougou - Burkina Faso </title>
+        <meta name="description" content="Perfect Design est une agence digitale basée à Ouagadougou au Burkina Faso inspirée par la passion & dopée par la performance !
+        Nous offrons à nos clients la réflexion, les compétences et les technologies nécessaires pour obtenir la seule chose qui compte vraiment : des résultats ! La création de votre site, son design, l’expérience utilisateur, le référencement SEO, le SEA, le community management, l’analytics, nous nous en chargeons dans un seul et unique but : la performance !">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="manifest" href="site.webmanifest">
@@ -22,6 +23,10 @@
             <link rel="stylesheet" href="assets/css/slick.css">
             <link rel="stylesheet" href="assets/css/nice-select.css">
             <link rel="stylesheet" href="assets/css/style.css">
+
+        <!-- Whatsapp Toggle Here -->
+        <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+        <script src="dist/js/whatsapp-widget.min.js"></script>
    </head>
 
    <body>
@@ -500,7 +505,55 @@
         </div>
         <!-- have-project End -->
 
+        
     </main>
+
+    <div class="center">
+
+        <!-- Toggleable custom form -->
+        <style>
+            .whatsapp-widget {
+                max-width: 480px;
+                display: none;
+            }
+            .whatsapp-widget.expanded {
+                display: block;
+            }
+        </style>
+        <!-- End -->
+
+        <!-- Built in form -->
+        <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+        <!-- End -->
+    
+        <script src="dist/js/whatsapp-widget.min.js"></script>
+        <script>
+            var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+                name: 'Perfect Design 226',
+                division: 'General Supports',
+                photo: 'assets/img/favicon.png',
+                introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+            }, [
+                {
+                    data: 'Votre nom',
+                    type: 'text',
+                    required: true
+                }, {
+                    data: 'Votre adresse email',
+                    type: 'email',
+                    required: false
+                }, {
+                    data: 'Votre message',
+                    type: 'text',
+                    required: true
+                }
+            ]);
+            generalSupport.toggle()
+        </script>
+
+    </div>
+
+
    <footer>
 
        <!-- Footer Start-->
