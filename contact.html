@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -11,6 +11,10 @@
     <!-- <link rel="manifest" href="site.webmanifest"> -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
+
+    <!-- Whatsapp Toggle Here -->
+    <link rel="stylesheet" href="dist/css/whatsapp-widget.min.css">
+    <script src="dist/js/whatsapp-widget.min.js"></script>
 
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -62,6 +66,15 @@
                                         <li><a href="index.html"> Accueil</a></li>
                                         <li><a href="about.html">A Propos de nous</a></li>
                                         <li><a href="services.html">Services</a></li>
+                                        <li><a href="blog.html">Notre Blog</a>
+                                            <ul class="submenu">
+                                                <li><a href="blog.html">Toutes les publications</a></li>
+                                                <li><a href="comment-verifier-la-compatibilte-d-un-jeu-avec-mon-pc.html">Vérifier la compatibilité d'un jeu avec votre PC</a></li>
+                                                <li><a href="comment-doter-mon-ordinateur-d-une-alarme-antivol.html">Dotez votre téléphone d'une alarme antivol</a></li>
+                                                <li><a href="comment-bouclez-l-acces-a-mon-pc-a-l-aide-d-une-simple-cle-usb.html">Bouclez l'accès de votre PC avec une simple clé USB</a></li>
+                                                <li><a href="comment-accelerez-mon-pc-au-demarrage.html">Accélérez votre PC au démarrage</a></li>
+                                            </ul>
+                                        </li>
                                         <li><a href="contact.html">Nous Contacter</a></li>
                                     </ul>
                                 </nav>
@@ -98,6 +111,52 @@
         </div>
     </div>
     <!-- Slider Area End-->
+
+    <div class="center">
+
+        <!-- Toggleable custom form -->
+        <style>
+            .whatsapp-widget {
+                max-width: 480px;
+                display: none;
+            }
+            .whatsapp-widget.expanded {
+                display: block;
+            }
+        </style>
+        <!-- End -->
+
+        <!-- Built in form -->
+        <form id="general-support" class="wa-widget" action="0022665000264" data-chat="general-support"></form>
+        <!-- End -->
+    
+        <script src="dist/js/whatsapp-widget.min.js"></script>
+        <script>
+            var generalSupport = new WhatsAppWidget(document.getElementById('general-support'), {
+                name: 'Perfect Design 226',
+                division: 'General Supports',
+                photo: 'assets/img/favicon.png',
+                introduction: 'Merci de nous laisser un message pour une prise en charge rapide'
+            }, [
+                {
+                    data: 'Votre nom',
+                    type: 'text',
+                    required: true
+                }, {
+                    data: 'Votre adresse email',
+                    type: 'email',
+                    required: false
+                }, {
+                    data: 'Votre message',
+                    type: 'text',
+                    required: true
+                }
+            ]);
+            //generalSupport.toggle()
+        </script>
+
+    </div>
+
 
     <!-- ================ contact section start ================= -->
     <section class="contact-section">
