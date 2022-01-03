@@ -103,14 +103,71 @@
             <div class="row d-flex justify-content-center">
                 <div class="col-lg-8">
                     <div class="section-tittle text-center mb-80">
-                        <span>Contact</span>
-                        <h2>Nous Contacter</h2>
+                        <span>Bibliothèque</span>
+                        <h2>Correction - Algorithmique & programmation</h2>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Slider Area End-->
+
+    <div class="container">
+        <p><span style="text-decoration: underline;"><strong>Corrigé 1</strong> </span></p>
+<ol>
+<li>#include &lt;stdio.h&gt;</li>
+<li>main()</li>
+<li>{</li>
+<li> </li>
+<li><em><strong> /* Déclarations */ </strong></em></li>
+<li> int A[100], B[50];    <em>/* tableaux */ </em></li>
+<li> int N, M;                 <em>/* dimensions des tableaux */ </em></li>
+<li> int *PA,*PB;           <em>/* pointeurs d'aide */ </em></li>
+<li> </li>
+<li><strong><em> /* Saisie des données */ </em></strong></li>
+<li> printf("Dimension du tableau A (max.50) : ");</li>
+<li> scanf("%d", &amp;N );</li>
+<li> for (PA=A; PA&lt;A+N; PA++)</li>
+<li>      {</li>
+<li>        printf("Elément %d : ", PA-A);</li>
+<li>        scanf("%d", PA);</li>
+<li>      }</li>
+<li> printf("Dimension du tableau B (max.50) : ");</li>
+<li> scanf("%d", &amp;M );</li>
+<li> for (PB=B; PB&lt;B+M; PB++)</li>
+<li>      {</li>
+<li>        printf("Elément %d : ", PB-B);</li>
+<li>        scanf("%d", PB);</li>
+<li>      }</li>
+<li> </li>
+<li><em><strong>/* Affichage des tableaux */ </strong></em></li>
+<li> printf("Tableau donné A :\n");</li>
+<li> for (PA=A; PA&lt;A+N; PA++)</li>
+<li> printf("%d ", *PA);</li>
+<li> printf("\n");</li>
+<li> printf("Tableau donné B :\n");</li>
+<li> for (PB=B; PB&lt;B+M; PB++)</li>
+<li> printf("%d ", *PB);</li>
+<li> printf("\n");</li>
+<li> </li>
+<li><em><strong> /* Copier B à la fin de A */ </strong></em></li>
+<li> for (PA=A+N,PB=B ; PB&lt;B+M ; PA++,PB++)</li>
+<li>        *PA = *PB;</li>
+<li><em><strong> </strong></em></li>
+<li><em><strong> /* Nouvelle dimension de A */ </strong></em></li>
+<li> N += M;</li>
+<li> </li>
+<li><strong> /* Edition du résultat */ </strong></li>
+<li> printf("Tableau résultat A :\n");</li>
+<li> for (PA=A; PA&lt;A+N; PA++)</li>
+<li>        printf("%d ", *PA);</li>
+<li> printf("\n");</li>
+<li> return 0;</li>
+<li>}</li>
+</ol>
+<p> </p>
+<p> </p>
+    </div>
 
     <div class="center">
 
@@ -158,71 +215,6 @@
     </div>
 
 
-    <!-- ================ contact section start ================= -->
-    <section class="contact-section">
-        
-                <div class="row">
-                    <div class="col-12 offset-lg-1">
-                        <h2 class="contact-title">Laissez-nous un message!</h2>
-                    </div>
-                    <div class="col-lg-8 offset-lg-1">
-                        <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <textarea class="form-control w-100" name="message" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrez Votre Message'" placeholder=" Entrez Votre Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrez Votre nom'" placeholder="Entrez Votre Nom">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Entrez Votre Adresse Email '" placeholder="Votre Email">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input class="form-control" name="subject" id="subject" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Objet'" placeholder="Objet">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group mt-3">
-                                <button type="submit" class="button button-contactForm boxed-btn">Envoyer</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    <!-- ================ contact section end ================= -->
-    
-         <!-- have-project Start-->
-         <div class="have-project pt-50">
-            <div class="container">
-                <div class="haveAproject"  data-background="assets/img/team/have.jpg">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-xl-7 col-lg-9 col-md-12">
-                            <div class="wantToWork-caption">
-                                <h2>Vous avez un projet en tête ?</h2>
-                                <p>Notre équipe de professionnels se charge de vous accompagner pas à pas dans chaque étape de votre projet.
-                                    N'hésitez pas à nous contacter!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-xl-5 col-lg-3 col-md-12">
-                           <div class="wantToWork-btn f-right">
-                                <a href="#" class="btn btn-ans">Nous Contacter</a>
-                           </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        <!-- have-project End -->
     
     <footer>
 
